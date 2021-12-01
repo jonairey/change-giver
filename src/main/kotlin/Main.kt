@@ -21,13 +21,12 @@ fun calculateSmallestChange(amount: Int): IntArray {
 
     while (leftOver > 0) {
         for (coin in coins) {
-            if (coin <= amount) {
+            if (coin <= leftOver) {
                 change.add(coin)
                 leftOver -= coin
-                continue
+                break
             }
         }
-        leftOver = 0
     }
 
     return change.toIntArray()

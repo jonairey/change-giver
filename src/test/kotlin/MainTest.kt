@@ -62,4 +62,22 @@ class MainTest {
         //then
         assertContentEquals(intArrayOf(2, 2), result)
     }
+
+    @Test
+    fun givenValueOfFive_whenCalculateSmallestChange_thenReturnArrayOfOneElementWithValue5() {
+        //when
+        val result = calculateSmallestChange(5)
+
+        //then
+        assertContentEquals(intArrayOf(5), result)
+    }
+
+    @Test
+    fun givenValueOfSix_whenCalculateSmallestChange_thenReturnArrayOfOneElementWithValue6() {
+        //when
+        val result = calculateSmallestChange(6)
+
+        //then
+        assertContentEquals(intArrayOf(5, 1), result)
+    }
 }
